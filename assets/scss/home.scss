@@ -1,0 +1,14 @@
+// Imported Fonts
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+// Variables
+$body-font:  'Varela', sans-serif;
+$heading-font: 'Ubuntu', sans-serif;
+
+// Global
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

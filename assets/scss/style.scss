@@ -1,0 +1,97 @@
+// Imported Fonts
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+// Variables
+$body-font:  'Varela', sans-serif;
+$heading-font: 'Ubuntu', sans-serif;
+
+// Global
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: red;
+    display: grid;
+    place-content: center;
+    font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+}
+
+
+// Overlay Screen
+button {
+    background: rgb(126, 25, 25);
+    border: none;
+    outline: none;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 2em;
+    font-size: 1.3em;
+    font-family: $body-font;
+    cursor: pointer;
+    font-weight: bold;
+}
+.overlay {
+    clip-path: circle(0%);
+    position: fixed;
+    background: #fffeff;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 2em;
+
+    .exit {
+        position: absolute;
+        right: 2em;
+        top: 2em;
+    }
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+}
+.menu-container {
+    margin-top: 2em;
+    opacity: 0;
+    transform: translateY(-30px);
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: .8em 2em .8em 1em;
+            font-size: .9em;
+
+            &:hover {
+                background: rgb(240,236,240);
+                border-radius: .2em;
+            }
+        }
+    }
+}
+
+h1.category {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(163, 65, 65);
+    margin-left: .8em;
+}
+
+.exit {
+    font-size: 1em;
+}
