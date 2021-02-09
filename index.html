@@ -8,6 +8,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Glider.js -->
+    <link rel="stylesheet" href="./assets/css/glider.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -16,10 +19,13 @@
     <body>
         <!-- Menu -->
         <div class="menu">
-            <a href="#hero"><div class="menu-dots"></div></a>
-            <a href="#about-me"><div class="menu-dots"></div></a>
-            <a href="#projects"><div class="menu-dots"></div></a>
-            <a href="#contact-me"><div class="menu-dots"></div></a>
+            <div class="menu-container">
+                <a href="#hero"><div class="menu-dots"></div></a>
+                <a href="#projects"><div class="menu-dots"></div></a>
+                <a href="#skills"><div class="menu-dots"></div></a>
+                <a href="#about-me"><div class="menu-dots"></div></a>
+                <a href="#contact-me"><div class="menu-dots"></div></a> 
+            </div>
         </div>
 
         <!-- Hero Section -->
@@ -32,8 +38,8 @@
                 <h1>Hi, I am <span>Jeremy</span></h1>
                 <h2>Full Stack Developer</h2>
                 <ul>
-                    <li><a href="#about-me">About Me</a></li>
                     <li><a href="#projects">View My Works</a></li>
+                    <li><a href="#about-me">About Me</a></li>
                     <li><a href="#contact-me">Contact Me</a></li>
                 </ul>
                 <div class="social-media">
@@ -41,35 +47,78 @@
                     <a href=""><i class="fa fa-linkedin"></i></a>
                     <a href=""><i class="fa fa-github"></i></a>
                 </div>
-                <!-- <img src="/assets/img/profilepic.png" alt=""> -->
+                
             </div>
         </section>
         
-        <!-- About Me -->
-        <section class="about-me" id="about-me">
-            <div class="header">
-                <h1>About Me</h1>
-                <h2>Who Am I?</h2>
-            </div>
-        </section>
-
         <!-- Projects -->
         <section class="projects" id="projects">
+            <h1>Projects</h1>
             <div class="header">
-                <h1>Projects</h1>
-                <h2>Full Stack Developer</h2>
+                <div class="glider-contain">
+                    <div class="glider">
+                      <div class="card"> <img src="./assets/img/150.png" alt=""></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" id="dots"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills -->
+        <section class="skills" id="skills">
+            <h1>Skills</h1>
+            <div class="header">
+                
+                <div><img src="/assets/img/html-5.svg" alt="html-5"></div>
+                <div><img src="/assets/img/css.svg" alt="css"></div>
+                <div><img src="/assets/img/sass.svg" alt="sass"></div>
+                <div><img src="/assets/img/javascript.svg" alt="javascript"></div>
+                <div><img src="/assets/img/mysql.svg" alt="mysql"></div>
+                <div><img src="/assets/img/nodejs.svg" alt="nodejs"></div>
             </div>
         </section>
 
+        <!-- About Me -->
+        <section class="about-me" id="about-me">
+            <h1>About Me</h1>
+            <div class="header">
+                
+                <h2>Full Stack Developer</h2>
+                <p>I am a student web developer at the University of Texas at Austin Bootcamp. Graduated from UT Austin with bachelors degree of Asian Studies and a minor in Business. During my free time, I am a photographer within the Austin, Texas area.</p>
+                <!-- Profile Pic -->
+                <figure>
+                    <img src="/assets/img/profilepic.jpg" alt="">
+                    <img src="" alt="">
+                </figure>
+                
+                <a href="">Resume</a>
+            </div>
+        </section>
+        
         <!-- Contact Me -->
         <section class="contact-me" id="contact-me">
+            <h1>Contact Me</h1>
             <div class="header">
-                <h1>Contact Me</h1>
+                
                 <h2>Full Stack Developer</h2>
             </div>
         </section>
 
+
+        <!-- Glider.js -->
+        <script src="./assets/js/glider.min.js"></script>
+
+        <!-- GSAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+        
         <!-- JavaScript -->
         <script src="./assets/js/script.js"></script>
     </body>
