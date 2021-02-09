@@ -1,10 +1,27 @@
 // Imported Fonts
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&display=swap');
 
 // Variables
+$hero-font: 'Big Shoulders Display', cursive;
 $body-font:  'Varela', sans-serif;
-$heading-font: 'Ubuntu', sans-serif;
+$p-font: 'Rajdhani', sans-serif;
+
+@mixin screen-size {
+    // width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 
 // Global
 * {
@@ -12,18 +29,30 @@ $heading-font: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family:"Varela",sans-serif;
-    background-color:#dfdfdf;
-    overflow-x:scroll;
-    scroll-behavior:smooth;
+    font-family: $body-font;
+    background-color:#f5efe0;
+    overflow-y: scroll;
+    // overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font;
+    font-family: $body-font;
+}
+section {
+    padding: 2em;
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #505050;
 }
 
+// Menu
 .menu {
     display:flex;
     flex-direction:row;
@@ -32,8 +61,8 @@ h1, h2, h3, h4, h5, h6 {
     width:100%;
     justify-content:center;
     align-items:center;
-}
-.menu {
+    z-index: 999;
+
     .menu-dots{
         width:10px;
         height:10px;
@@ -41,23 +70,160 @@ h1, h2, h3, h4, h5, h6 {
         border-radius:50%;
         margin:0 1em 0;
         transition:.5s all;
+
+        &:hover {
+            background-color: #505050;
+            transform: scale(1.5);
+        }
+        &:active {
+            background-color: #505050;
+            transform: scale(1.5);
+        }
     }
 }
 
-.logo {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    margin-top:1em;
-    width:100%;
-    
-    img {
-        width:200px;
-        height:auto;
-    }
-} 
+// Hero Section
 .hero {
-    width:100vw;
-    height:auto
+    @include screen-size;
+
+    // Logo
+    .logo {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin-top:1em;
+        width:100%;
+        z-index: 1;
+        
+        img {
+            width:200px;
+            height:auto;
+        }
+    } 
+    .bio {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-family: $hero-font;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        h2 {
+            font-family:$body-font;
+            font-style: italic;
+            font-size: 1em;
+        }
+        ul {
+            margin: 1em;
+            font-family: $p-font;
+
+            li {
+                margin: .5em auto;
+                padding: .2em;
+
+                &:hover {
+                    background-color: #a5a5a5;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .social-media a {
+            font-size: 1em;
+            margin: 0 .5em;
+
+            i {
+                transition: .25s ease-in;
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+        // img {
+        //     width: 200px;
+        //     height: auto;
+
+        // }
+    }
+}
+
+// About Me
+.about-me {
+    @include screen-size;
+    
+    .header {
+        @include header;
+        width: 100%;
+        height: 100%;
+        margin-top: 2em;
+
+        h1 {
+            font-family: $body-font;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        h2 {
+            font-family:$body-font;
+            font-style: italic;
+            font-size: 1em;
+        }
+
+    }
+}
+
+// Projects
+.projects {
+    @include screen-size;
+
+    .header {
+        @include header;
+        width: 100%;
+        height: 100%;
+        margin-top: 2em;
+
+        h1 {
+            font-family: $body-font;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        h2 {
+            font-family:$body-font;
+            font-style: italic;
+            font-size: 1em;
+        }
+
+    }
+}
+
+// Contact Me
+.contact-me {
+    @include screen-size;
+
+    .header {
+        @include header;
+        width: 100%;
+        height: 100%;
+        margin-top: 2em;
+
+        h1 {
+            font-family: $body-font;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        h2 {
+            font-family:$body-font;
+            font-style: italic;
+            font-size: 1em;
+        }
+
+    }
 }
