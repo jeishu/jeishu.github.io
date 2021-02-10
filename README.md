@@ -1,8 +1,8 @@
-# Dungeon Scribe
+# Jeremy Portfolio
 
 ## Description
 
-Dugneon Scribe is an web-base application designed to give users/players the ability to coordinate game logs through an online chat system that updates live.
+Mobile First design with SASS as the main language used for styling.
 
 ## Table of Contents
 
