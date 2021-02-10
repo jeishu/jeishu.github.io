@@ -9,24 +9,29 @@ $body-font:  'Varela', sans-serif;
 $p-font: 'Rajdhani', sans-serif;
 
 // Mixin
-@mixin display-column-center {
+@mixin display-column {
     display: flex;
     flex-direction: column;
+}
+@mixin display-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin justify-align-center {
     justify-content: center;
     align-items: center;
+}
+@mixin justify-align-start {
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 @mixin screen-size {
     // width: 100%;
     height: 100vh;
-    @include display-column-center;
+    @include display-column;
+    @include justify-align-center;
 }
-@mixin header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-@mixin animate-underline {
+@mixin animate-underline-left {
     position: relative;
     &::before {
         position: absolute;
@@ -42,6 +47,26 @@ $p-font: 'Rajdhani', sans-serif;
     &:hover::before {
         visibility: visible;
         width: 100%;
+    }
+    &:hover {color: black}
+}
+@mixin animate-middle-out {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
     }
     &:hover {color: black}
 }
@@ -67,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 section {
     padding: 2em .5em;
     margin: 0 2.5em;
-    border-top: rgb(155, 155, 155) 1px solid;
+    // border-top: rgb(155, 155, 155) 1px solid;
 }
 a {
     list-style: none;
@@ -81,14 +106,15 @@ a {
     position:fixed;
     bottom: 5%;
     z-index: 999;
-    @include display-column-center;
+    @include display-column;
+    @include justify-align-center;
 }
 .menu-container {
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    border-top: rgb(155, 155, 155) 1px solid;
+    // border-top: rgb(155, 155, 155) 1px solid;
     width:40%;
     padding-top: 1.5em;
     margin: 0 auto;
@@ -118,7 +144,8 @@ a {
 
     // Logo
     .logo {
-        @include display-column-center;
+        @include display-column;
+        @include justify-align-center;
         margin-top:1em;
         width:100%;
         z-index: 1;
@@ -131,7 +158,8 @@ a {
     .bio {
         width: 100%;
         height: 100%;
-        @include display-column-center;
+        @include display-column;
+        @include justify-align-center;
 
         h1 {
             font-family: $hero-font;
@@ -154,7 +182,7 @@ a {
                 padding: .2em;
                 
                 a {
-                    @include animate-underline;
+                    @include animate-underline-left;
                 }
             }
         }
@@ -169,34 +197,41 @@ a {
                 }
             }
         }
+        img {
+            width: 250px;
+            height: auto
+        }
     }
 }
 
 // Projects
 .projects {
     @include screen-size;
+    
 
     h1 {
         font-family: $body-font;
         font-weight: bold;
         font-size: 2em;
+        align-self: flex-start;
     }
     .header {
-        @include display-column-center;
+        @include display-column;
+        @include justify-align-center;
         width: 100%;
         height: 100%;
         
         .glider {
-            width: 100%;
-            height: 100%;
-            padding-bottom: 2em;
-            text-align: center;
+            // @include display-column;
+            // @include justify-align-start;
 
             .card {
-                content: "";
-                width: 100px;
+                @include display-column;
+                @include justify-align-center;
+                width: 100%;
                 height: 200px;
-                background-color: black;
+                border: 2px solid black;
+                margin: 2em;
             }
         }
 
@@ -216,9 +251,11 @@ a {
         font-family: $body-font;
         font-weight: bold;
         font-size: 2em;
+        align-self: flex-start;
     }
     .header {
-        @include display-column-center;
+        @include display-column;
+        @include justify-align-center;
         width: 50%;
         height: 100%;
         padding-bottom: 2em;
@@ -247,10 +284,12 @@ a {
         font-family: $body-font;
         font-weight: bold;
         font-size: 2em;
+        align-self: flex-start;
     }
 
     .header {
-        @include display-column-center;
+        @include display-column;
+        @include justify-align-center;
         width: 100%;
         height: 100%;
         align-items: center;
@@ -269,8 +308,9 @@ a {
             width: 200px;
             height: auto;
         }
+            
         a {
-            @include animate-underline;
+            @include animate-underline-left;
         }
     }
 }
@@ -283,9 +323,11 @@ a {
         font-family: $body-font;
         font-weight: bold;
         font-size: 2em;
+        align-self: flex-start;
     }
     .header {
-        @include display-column-center;
+        @include display-column;
+        @include justify-align-center;
         width: 100%;
         height: 100%;
 
