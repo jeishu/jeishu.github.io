@@ -19,8 +19,9 @@ Main Features:
 
 * [x] Mobile First Design
 * [x] SASS used with CSS Compiler
-* [x] Media Query for desktop view
-* [x] Switch from vertical scroll on mobile to horizontal scroll on desktop
+* [x] (Done: 02/09/2021) Media Query for desktop view
+* [x] (Done: 02/09/2021) Switch from vertical scroll on mobile to horizontal scroll on desktop
+* [x] (Done: 02/10/2021) Using jQuery for Horizontal Scrolling with mousewheel (Credits below)
 
 Future Features:
 
@@ -48,7 +49,7 @@ I had my inspiration for my website from this developer, [Mengdi](https://career
 
 The skills icons are from the [Flaticons](https://www.flaticon.com/authors/pixel-perfect).
 
-The horizontal scroll for desktop is using this [video](https://www.youtube.com/watch?v=pOXl6KH2N8Y) as reference.
+The horizontal scroll for desktop is using this [video](https://www.youtube.com/watch?v=pOXl6KH2N8Y) as reference. The actual horizontal scrolling with mouse wheel is done thanks to this developer's website, [Edd Turtle](https://designedbyaturtle.com/horizontal-scrolling-with-jquery/), which is based off of [Brandon Aaron](https://github.com/brandonaaron)'s code.
 
 ## Contributors
 
