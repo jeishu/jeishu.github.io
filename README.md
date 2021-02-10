@@ -24,7 +24,7 @@ Main Features:
 
 Future Features:
 
-* Animation on scroll
+* Animation on scroll by using [GSAP](https://greensock.com/docs/v3/GSAP/Timeline)
 * A working form page for email and filling out
 
 ## Links
@@ -37,7 +37,7 @@ Future Features:
 
 * HTML
 * CSS
-* SASS
+* [SASS](https://sass-lang.com/)
 * JavaScript
 
 ## Reference
@@ -45,6 +45,10 @@ Future Features:
 I wanted to inplement a [Copy Button](https://stackoverflow.com/questions/50795042/create-a-copy-button-without-an-input-text-box) for my email on my website, so with the help of this Stack Overflow forum, I was able to do it.
 
 I had my inspiration for my website from this developer, [Mengdi](https://careerfoundry.com/en/blog/ui-design/best-ui-portfolios/). The website is down, but from the pictures, I had enough ideas to make it mine.
+
+The skills icons are from the [Flaticons](https://www.flaticon.com/authors/pixel-perfect).
+
+The horizontal scroll for desktop is using this [video](https://www.youtube.com/watch?v=pOXl6KH2N8Y) as reference.
 
 ## Contributors
 
