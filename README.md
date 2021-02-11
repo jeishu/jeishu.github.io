@@ -40,6 +40,7 @@ Future Features:
 * CSS
 * [SASS](https://sass-lang.com/)
 * JavaScript
+* jQuery
 
 ## Reference
 
@@ -51,11 +52,11 @@ I had my inspiration for my website from this developer, [Mengdi](https://career
 
 The skills icons are from the [Flaticons](https://www.flaticon.com/authors/pixel-perfect).
 
-The horizontal scroll for desktop is using this [video](https://www.youtube.com/watch?v=pOXl6KH2N8Y) as reference. The actual horizontal scrolling with mouse wheel is done thanks to this developer's website, [Edd Turtle](https://designedbyaturtle.com/horizontal-scrolling-with-jquery/), which is based off of [Brandon Aaron](https://github.com/brandonaaron)'s code.
+The horizontal scroll for desktop is using this [video](https://www.youtube.com/watch?v=pOXl6KH2N8Y) as reference. The actual horizontal scrolling with mouse wheel is done thanks to this developer's website, [Edd Turtle](https://designedbyaturtle.com/horizontal-scrolling-with-jquery/), which is based off of [Brandon Aaron](https://github.com/brandonaaron)'s code. This part of the code was pretty tricky, so I had to combined it with [W3school](https://www.w3schools.com/js/js_window.asp)'s help. 
 
 ## Contributors
 
-This code was written by me with some help of the Stack Overflow forum.
+This code was written by me with some help of the Stack Overflow forum. My teacher's assistant, Sean, helped me figure out a the problem with horizontal scrolling.
 
 ## Questions
 If you have any question about the website, don't hesitate to contact me at my portfolio, [Jeremy Zhu](https://github.com/jeishu) or my [website](https://jeishu.github.io/).

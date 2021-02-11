@@ -313,10 +313,13 @@ a {
             height: auto;
             transform: rotate(10deg);
         }
-        a {
-            margin: 1em 0 0;
-            @include animate-underline-left;
+        .links {
+            a {
+                margin: 1em 1em 0;
+                @include animate-underline-left;
+            }
         }
+        
     }
 }
 
@@ -396,14 +399,21 @@ a {
 
                 .bio-container {
                     width: 50%;
-                    h1 {font-size: 3em;}
+                    h1 {
+                        font-size: 3em;
+                        text-align: center;
+                    }
                     h2 {
                         font-size: 1.5em;
                         margin-top: 1em;
+                        text-align: center;
+
                     }
                     ul {
                         flex-direction: column;
                         margin: 1em 0;
+                        text-align: center;
+
                         li {
                             width: 100%;
                             margin: inherit 0;
@@ -425,22 +435,21 @@ a {
         // About Me
         .about-me {
             .header {
-                h2 {
-                    margin-top: 0;
-                    font-size: 1.5em;
-                }
-                p {
-                    font-size: 1.5em;
-                    margin: 2em;
-                }
-                img {
-                    width: 300px;
-                    transform: rotate(-10deg);
-                    transition: .5s ease-in-out all;
-                }
-                a {
-                    margin: 1em 0 0;
-                    @include animate-underline-left;
+                width: 60%;
+                .about-container {
+                    h2 {
+                        margin-top: 0;
+                        font-size: 1.5em;
+                    }
+                    p {
+                        font-size: 1.2em;
+                        margin: 2em 1em 2em 0em;
+                    }
+                    img {
+                        width: 300px;
+                        transform: rotate(-10deg);
+                        transition: .5s ease-in-out all;
+                    }
                 }
             }
         }
@@ -528,8 +537,9 @@ a {
         .header {
             @include display-row;
             @include justify-align-center;
+            width: 30%;
             .about-container {
-                
+                width: 50%;
                 h2 {
                     margin-top: 0;
                     font-size: 1.5em;
