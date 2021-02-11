@@ -345,16 +345,15 @@ a {
             font-style: italic;
             font-size: 1em;
         }
-        .card { 
+        .card {
+            margin: .5em; 
 
-            p {
-                margin: 1em auto;
+            a {
+                margin: .5em auto;
                 font-family: $p-font;
                 align-self: flex-start;
-                margin: .5em auto;
                 padding: .2em;
                 @include animate-underline-left;
-                
                 i {
                     margin: .25em;
                 }
@@ -364,12 +363,11 @@ a {
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
-                margin: 1em auto;
                 font-family: $p-font;
                 font-size: 1em;
                 color: #505050;
                 align-self: flex-start;
-                margin: .5em auto;
+                margin: 0;
                 padding: .2em;
                 @include animate-underline-left;
 
@@ -478,11 +476,10 @@ a {
                 }
                 .card { 
 
-                    p {
+                    a {
                         margin: 1em auto;
                         font-family: $p-font;
                         align-self: flex-start;
-                        margin: .5em auto;
                         padding: .2em;
                         @include animate-underline-left;
                         
@@ -495,12 +492,11 @@ a {
                         border: none;
                         background-color: transparent;
                         cursor: pointer;
-                        margin: 1em auto;
                         font-family: $p-font;
                         font-size: 1em;
                         color: #505050;
                         align-self: flex-start;
-                        margin: .5em auto;
+
                         padding: .2em;
                         @include animate-underline-left;
 
