@@ -1,5 +1,7 @@
 // Variables
 const copyBtn = document.querySelector("#copy");
+const menuDotsBtn = document.querySelector(".menu-container");
+const dotsBtn = menuDotsBtn.getElementsByClassName("menu-dots");
 
 // Functions
 function Clipboard_CopyTo(value) {
@@ -15,6 +17,8 @@ function Clipboard_CopyTo(value) {
 copyBtn.onclick = function() {
     Clipboard_CopyTo('jeremy.zhu@utexas.edu');
 }
+
+// Active Page
 
 // Horizontal Scroll
 $(".horizontal-container").mousewheel(function(e) {

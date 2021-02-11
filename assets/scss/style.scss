@@ -132,14 +132,23 @@ a {
             background-color: #505050;
             transform: scale(1.5);
         }
-        &:active {
-            background-color: #000000;
-            transform: scale(1.5);
-        }
     }
+}
+.active {
+    background-color: #000000;
+    transform: scale(1.5);
 }
 
 // Hero Section
+.horizontal-container {
+    -ms-scroll-snap-points-x: repeat(100%); /* Make the scroll lock every 100% of the screen */
+    scroll-snap-points-x: repeat(100%);
+-ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+-ms-scroll-snap-destination: 100% 0%; /* Snap the divs to the top of the screen*/
+    scroll-snap-destination: 100% 0%;
+}
+
 .hero {
     @include screen-size;
 
