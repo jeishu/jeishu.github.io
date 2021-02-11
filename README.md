@@ -43,6 +43,8 @@ Future Features:
 
 ## Reference
 
+All fonts are from Google Fonts.
+
 I wanted to inplement a [Copy Button](https://stackoverflow.com/questions/50795042/create-a-copy-button-without-an-input-text-box) for my email on my website, so with the help of this Stack Overflow forum, I was able to do it.
 
 I had my inspiration for my website from this developer, [Mengdi](https://careerfoundry.com/en/blog/ui-design/best-ui-portfolios/). The website is down, but from the pictures, I had enough ideas to make it mine.

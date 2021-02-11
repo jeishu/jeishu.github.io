@@ -171,21 +171,23 @@ a {
                 font-family: $hero-font;
                 font-weight: bold;
                 font-size: 2em;
+                text-align: center;
             }
             h2 {
                 font-family:$body-font;
                 font-style: italic;
                 font-size: 1em;
                 margin-top: 1em;
+                text-align: center;
             }
             ul {
-                margin: 1em auto;
+                margin: inherit 0;
+                width: fit-content;
                 font-family: $p-font;
                 @include display-column;
-                @include justify-align-center;
-
+                text-align:left;
                 li {
-                    margin: .5em auto;
+                    margin: .5em 0;
                     padding: .2em;
                     
                     a {
@@ -401,7 +403,12 @@ a {
                     }
                     ul {
                         flex-direction: column;
-                        margin: 1em 2em 1em 2em;
+                        margin: 1em 0;
+                        li {
+                            width: 100%;
+                            margin: inherit 0;
+                            text-align: left;
+                        }
                     }
                     .social-media a {
                         font-size: 1.2em;
@@ -411,15 +418,7 @@ a {
                 img {width: 400px;}
             }
         }
-
-        // Projects Section
-        .projects {
-            .header {
-                @include display-row;
-                a { img {width: 500px;} }
-            }
-        }
-
+        
         // Skills Section
         .skills { .header { img {width: 500px;} } }
 
@@ -503,15 +502,54 @@ a {
                 }
             }
         }
-
-
     }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+    .hero {
+        .bio {
+            .bio-container {width: 30%;}
+            img {
+                width: auto;
+                height: 600px;
+            }
+        }
+    }
+    // Projects Section
+    .projects {
+        .header {
+            @include display-row;
+            a { img {width: 400px;} }
+        }
+    }
+    // About Me
+    .about-me {
+        .header {
+            @include display-row;
+            @include justify-align-center;
+            .about-container {
+                
+                h2 {
+                    margin-top: 0;
+                    font-size: 1.5em;
+                }
+                p {
+                    font-size: 1.5em;
+                    margin: 2em;
+                }
+                img {
+                    width: 300px;
+                    transform: rotate(-10deg);
+                    transition: .5s ease-in-out all;
+                }
+                a {
+                    margin: 1em 0 0;
+                    @include animate-underline-left;
+                }
+            }
+        }
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
