@@ -27,6 +27,7 @@ Future Features:
 
 * Animation on scroll by using [GSAP](https://greensock.com/docs/v3/GSAP/Timeline)
 * A working form page for email and filling out
+* Scrolling will snap to anchor points instead of free scrolling for better UX experience
 
 ## Links
 

@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 // Variables
 $hero-font: 'Big Shoulders Display', cursive;
 $body-font:  'Varela', sans-serif;
 $p-font: 'Rajdhani', sans-serif;
+$project-font: 'Shadows Into Light', cursive;
 
 // Mixin
 @mixin display-column {
@@ -99,6 +101,28 @@ a {
     list-style: none;
     text-decoration: none;
     color: #505050;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/* Track */
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+// }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    transition: .5s all;
 }
 
 // Menu
@@ -238,12 +262,37 @@ a {
         @include justify-align-center;
         width: 100%;
         height: 100%;
-        
-        a {
-            img {
-                width: 300px;
-                height: auto;
+        .project-card {
+            @include display-column;
+            @include justify-align-center;
+            .arrows-left, .arrows-right {
+                width: 30px;
+                transform: rotate(60deg);
             }
+            p {
+                font-size: 0.9em;
+                text-align: center;
+                width: 50%;
+                font-family: $project-font;
+            }
+            a {
+                transition: .5s all;
+                img {
+                    width: 200px;
+                    height: auto;
+                }
+                
+                &:hover {
+                    transform: scale(1.2);
+                    transform: rotate(10deg);
+                    transition: .5s all;
+                }
+                .repo {
+                    width: 25px;
+                    height: auto;
+                }
+            }
+            
         }
 
         h2 {
@@ -321,6 +370,11 @@ a {
             width: 200px;
             height: auto;
             transform: rotate(10deg);
+            transition: .5s all;
+            &:hover{
+                transform: rotate(-10deg);
+                transition: .5s all;
+            }
         }
         .links {
             a {
@@ -435,7 +489,13 @@ a {
                 img {width: 400px;}
             }
         }
-        
+        // Projects Section
+        .projects {
+            .header {
+                @include display-row;
+                a { img {width: 200px;} }
+            }
+        }
         // Skills Section
         .skills { .header { img {width: 500px;} } }
 
@@ -534,7 +594,7 @@ a {
     .projects {
         .header {
             @include display-row;
-            a { img {width: 400px;} }
+            a { img {width: 500px;} }
         }
     }
     // About Me
@@ -567,7 +627,13 @@ a {
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
+/* Extra large devices (large laptops and desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+    // Projects Section
+    .projects {
+        .header {
+            @include display-row;
+            .project-card {a { img {width: 300px;} }} 
+        }
+    }
 }
